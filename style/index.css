@@ -1,0 +1,324 @@
+/*
+背景图片
+*/
+body {
+    background-image: url("../images/moutain2.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+
+/*
+顶部导航栏(左侧)
+*/
+.topLNavi {
+    /* 位置固定在顶部 */
+    position: absolute;
+    /* 填充宽度 高度*/
+    width: 100VW;
+    height: 3rem;
+    max-width: 100%;
+    /* 背景框毛玻璃效果 */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* 背景框颜色 */
+    background-color: rgb(144,168,225, 0.5);
+}
+.topLNavi ul {
+    /* 横向排列 */
+    display: flex;
+    flex-direction: row;
+    /* 去除点 */
+    list-style: none;
+}
+.topLNavi li {
+    height: 3rem;
+}
+/* Home键背景 */
+.topLNavi li:first-child {
+    background: linear-gradient(rgb(114, 41, 214, 0.5), rgb(170, 70, 238, 0.6));  /* 背景色 */
+}
+/* Home键 属性 */
+.topLNavi li:first-child a {
+    display: block;
+    padding: 0.65rem 0.7rem;   /* 文字 高度/宽度 */
+    color: #90E1A0;             /* 文字颜色 */
+    font-size: 24px;
+    font-family: STXihei, "Microsoft YaHei";
+    font-weight: bold;
+    text-decoration: none;
+}
+/* 其他按键 属性 */
+.topLNavi li a {
+    transition: all 450ms;
+    display: block;     /* 把链接显示为块元素可使整个链接区域可点击 */
+    padding: 0.65rem 0.5rem;   /* 文字 高度/宽度 */
+    color: #ecffa8;     /* 文字颜色 */
+    font-size: 22px;    /* 文字大小 */
+    font-family: STXihei, "Microsoft YaHei";
+    text-decoration-line: none;     /* 去除下划线 */
+}
+/* 其他按键 选中效果 */
+.topLNavi li a:hover:not(.active){
+    height: 1.7rem;
+    /* 圆角 */
+    border-radius: 30px;
+    /* 背景变色 */
+    background-color: rgb(106, 136, 205);
+    /* 下划线 */
+    text-decoration: underline #ecffa8;
+    /* 动画时间 */
+    transition: all 250ms;
+}
+
+
+/*
+顶部导航栏(右侧)
+*/
+.topRNavi {
+    position: absolute;
+    right: 0;           /* 靠右 */
+    width: 20%;         /* 宽度20%*(避免遮挡左侧按键) */
+    height: 3rem;     /* 高度同高 */
+    max-width: 100%;
+}
+.topRNavi ul {
+    display: flex;
+    flex-direction: row;
+    float: right;           /* 右对齐 */
+    list-style: none;
+}
+.topRNavi li {
+    height: 3rem;
+}
+/* Contact按键 属性 */
+.topRNavi li a {
+    display: block;             /* 把链接显示为块元素可使整个链接区域可点击 */
+    padding: 0.8rem 0.5rem;     /* 文字 高度/宽度 */
+    color: #ecffa8;             /* 文字颜色 */
+    overflow: hidden;
+    font-size: 22px;            /* 文字大小 */
+    text-decoration-line: none; /* 去除下划线 */
+}
+/* Contact按键 选中效果 */
+.topRNavi li a:hover {
+    /* 圆角 */
+    border-radius: 30px;
+    /* 背景变色 */
+    background-color: rgb(106, 136, 205);
+    /* 下划线 */
+    text-decoration: underline #ecffa8;
+    /* 动画时间 */
+    transition: all 250ms;
+}
+
+/*
+书法名字
+*/
+.name {
+    height: 89.5VH;
+    padding: 10.5VH;
+    text-align: center;
+}
+.name img {
+    padding: 0;
+    height: 89.5VH;
+    max-height: 100%;
+}
+
+
+/*
+网页介绍 Introduction
+*/
+/* 介绍 背景 */
+.intro {
+    width: 100%;
+    height: 8rem;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 33, 45);     /* 背景色 */
+}
+/* 介绍 标题 */
+.intro h2 {
+    padding-top: 1rem;  /* 离边框顶部高度 */
+    width: 100%;    /* 宽度 */
+    height: 2rem;   /* 高度 */
+    text-align: center;     /* 居中 */
+    font: bold 36px STXihei, "Microsoft YaHei";    /* 字体 */
+    color: antiquewhite;
+}
+/* 介绍 内容 */
+.intro p {
+    padding-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-family: STXihei, "Microsoft YaHei";
+    color: antiquewhite;
+}
+
+
+/*
+个人介绍 About
+*/
+/* 介绍 背景 */
+.about {
+    display: flex;
+    width: 100%;
+    height: 90VH;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248,244,244);     /* 背景色 */
+}
+/* 介绍 左侧 */
+.left {
+    flex: 1;
+    padding-top: 1rem;  /* 离边框顶部距离 */
+    width: 65%;
+}
+/* 信息栏 */
+.about li {
+    list-style: none;   /* 去除li的点 */
+    padding-top: 1rem;  /* 离边框顶部距离 */
+    padding-bottom: 0.5rem;
+    margin-left: 5rem;  /* 左侧空白长度 */
+    width: 65%;         /* 总宽度 */
+    text-align: left;   /* 左侧对齐 */
+    font-size: 18px;    /* 字体大小 */
+    font-family: STXihei, "Microsoft YaHei";
+    color: rgb(27, 33, 45);
+    border-bottom: 2px solid rgb(220,220,220);  /* 下划线 */
+}
+/* 按钮栏 位置*/
+.btn {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+/* 按钮栏 属性 */
+.btn button {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 3rem;
+    cursor: pointer;
+    background-color: rgb(248,244,244);
+    border-radius: 15px;
+    border-color: black;
+    transition: all 270ms;
+}
+/* 按钮栏 选中效果 */
+.btn button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.25);
+    transition: all 270ms;
+}
+/* 介绍 右侧 */
+.about p {
+    flex: 1.6;  /* Set left-right ratio in golden ratio 1:1.6 */
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+    text-align: left;   /* 左侧对齐 */
+    font: 20px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    color: rgb(146,146,146);
+}
+
+/*
+LeetCode数据
+*/
+/*  */
+.leetcode {
+    display: flex;
+    width: 100%;
+    height: 90VH;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248,244,244);     /* 背景色 */
+}
+.leetcode h2 {
+    flex: 1;
+    margin-left: 3rem;
+    font: bold 28px STXihei, "Microsoft YaHei";    /* 字体 */
+}
+
+.card {
+    flex: 2;
+    margin: 3rem 7rem;
+    height: 19rem;
+    background: linear-gradient(#333, dimgray);
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card .skill {
+    height: 50px;
+}
+
+.card .skill:hover {
+    background-color: #333;
+}
+
+.card .skill span {
+    display: block;
+}
+
+.card .skill .level {
+    text-align: right;
+    transform: translateY(-1em);
+    position: relative;
+}
+
+.card .skill .level::after {
+    content: '';
+    position: absolute;
+    top: 1.2em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid mediumspringgreen;
+    border-radius: 0.2em;
+    background-image: linear-gradient(to right, mediumspringgreen, mediumspringgreen);
+    background-repeat: no-repeat;
+    background-position: top 1px left 1px;
+}
+
+.card .skill.html .level::after {
+    background-size: 90% 1em;
+}
+
+.card .skill.css .level::after {
+    background-size: 95% 1em;
+}
+
+.card .skill.javascript .level::after {
+    background-size: 80% 1em;
+}
+
+.card .skill.svg .level::after {
+    background-size: 60% 1em;
+}
+
+.card .skill.canvas .level::after {
+    background-size: 75% 1em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
