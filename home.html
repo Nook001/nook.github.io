@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Title of page tag/标签页标题-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuanzhi Liu</title>
+    <link rel="stylesheet" href="style/home.css">
+    <script src="https://kit.fontawesome.com/202dfade75.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!-- 顶部导航栏(左侧) -->
+    <div class="topLNavi">
+            <ul>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="https://github.com/Nook001">GitHub</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/">LinkedIn</a></li>
+            </ul>
+    </div>
+
+    <!-- 顶部导航栏(右侧) -->
+    <div class="topRNavi">
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+
+
+
+    <!-- 首页 书法名字 -->
+    <div class="name">
+        <img src="images/name.png" height="90.5VH" alt="my name" />
+    </div>
+
+    <!-- 网页介绍 Introduction -->
+    <div class="intro">
+        <h2>Introduction</h2>
+            <p>Hello and welcome to Nook's website.</p>
+            <p>This website contains some information about me</p>
+    </div>
+
+    <!-- 个人介绍 About -->
+    <div class="about">
+
+        <!-- 个人介绍 左侧 -->
+        <div class="left">
+
+            <!-- 信息栏 -->
+            <ul>
+                <li> <b>NAME:</b>       <span class="tableR">Liu Yuanzhi(Nook)</span></li>
+                <li> <b>PRONOUNS:</b>   <span class="tableR">He/His/Him</span></li>
+                <li> <b>SCHOOL:</b>     <span class="tableR">University of Warwick</span></li>
+                <li> <b>DOB:</b>        <span class="tableR">2004/07</span></li>
+                <li> <b>HOMETOWN:</b>   <span class="tableR">Hunan, China</span></li>
+            </ul>
+
+            <!-- 按钮栏 -->
+            <div class="btn">
+                <a href="https://github.com/Nook001"><button><i class="fa-brands fa-github"></i></button></a>
+                <a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                <a href="mailto:Nook_lyz@outlook.com"><button><i class="fa-regular fa-envelope"></i></button></a>
+            </div>
+        </div>
+
+        <!-- 个人介绍 右侧 -->
+        <p>
+            I am an international student enrolling in 2023 at the University of Warwick.
+            I am currently studying for an undergraduate degree in Computer Science.
+            My main programming languages are Java, Haskell and Python,
+            and I can also write front-end code using HTML and CSS.
+            My main interest is software engineering.<br><br>
+
+            After school I volunteer in various activities held by Warwick Volunteer and am interested in making computer games.
+        </p>
+    </div>
+
+    <!-- LeetCode数据 -->
+    <div class="leetcode">
+        <h2>My LeetCode</h2>
+
+        <div class="card">
+            <h2>Development Skills</h2>
+            <p class="skill html">
+                <span>HTML</span>
+                <span class="level">90%</span>
+            </p>
+            <p class="skill css">
+                <span>CSS</span>
+                <span class="level">95%</span>
+            </p>
+            <p class="skill javascript">
+                <span>JavaScript</span>
+                <span class="level">80%</span>
+            </p>
+            <p class="skill svg">
+                <span>SVG</span>
+                <span class="level">60%</span>
+            </p>
+            <p class="skill canvas">
+                <span>Canvas</span>
+                <span class="level">75%</span>
+            </p>
+        </div>
+    </div>
+
+    <h3>天气预报</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>城市</th>
+            <th>今天</th>
+            <th>明天</th>
+            <th>后天</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th>长沙</th>
+            <td>多云</td>
+            <td>小雨</td>
+            <td>沙尘暴</td>
+        </tr>
+            
+        <tr>
+            <th>伦敦</th>
+            <td>暴雨</td>
+            <td>小雪</td>
+            <td>沙尘暴</td>
+        </tr>
+
+        <tr>
+            <th>莫斯科</th>
+            <td>晴</td>
+            <td>小雨</td>
+            <td>沙尘暴</td>
+        </tr>
+        </tbody><br>
+    </table><hr>
+
+
+    <h3>时事投票</h3>
+    近日,人们对谭松自杀事件发起了投票(多选),<br>
+    <input type="checkbox" name="suicide" id="1"><label for="1">好死好死</label><br>
+    <input type="checkbox" name="suicide" id="2"><label for="2">死了无所谓</label><br>
+    <input type="checkbox" name="suicide" id="3"><label for="3">别死在我们寝室就行</label><hr>
+
+    对谢晓琳拒绝的看法(单选),<br>
+    <label><input type="radio" name="refuse" id="4">支持</label><br>
+    <label><input type="radio" name="refuse" id="5">非常支持</label><br>
+    <label><input type="radio" name="refuse" id="6">完全支持</label><hr>
+        
+    文件上传,<br>
+    <input type="file" multiple><hr>
+
+
+    <h3>时事评论</h3>
+        对谭松被拒的看法: <input type="text" placeholder="随便写">
+        对谭松自杀的看法: <input type="text" placeholder="赞同"><hr>
+
+
+    <h3>表单</h3>
+    <select>
+        <option selected>好似</option>
+        <option>好似喵</option>
+        <option>好似捏</option>
+    </select><hr>
+
+
+    <h3>长评论</h3>
+    <textarea placeholder="say something"></textarea>
+
+
+    <dl>
+        <dt>服务中心</dt>
+        <dd>申请售后</dd>
+        <dd>售后政策</dd>
+
+        <dt>线下门店</dt>
+        <dd>小米之家</dd>
+        <dd>服务网点</dd>
+
+        <dt>关于</dt>
+        <dd>了解小米</dd>
+        <dd>加入小米</dd>
+    </dl>
+    
+</body>
+</html>
