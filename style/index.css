@@ -20,13 +20,14 @@ body {
     position: absolute;
     /* 填充宽度 高度*/
     width: 100%;
-    height: 3rem;
+    height: 5rem;
     /* 背景框毛玻璃效果 */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     /* 背景框颜色 */
     background-color: rgb(144,168,225, 0.5);
 }
+
 .topLeft {
     /* 左侧占比 */
     flex: 1;
