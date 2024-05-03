@@ -13,55 +13,73 @@ body {
 /*
 顶部导航栏(左侧)
 */
-.topLNavi {
+.topNavi {
+    display: flex;
+    justify-content: space-between;
     /* 位置固定在顶部 */
     position: absolute;
     /* 填充宽度 高度*/
-    width: 100VW;
+    width: 100%;
     height: 3rem;
-    max-width: 100%;
     /* 背景框毛玻璃效果 */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     /* 背景框颜色 */
     background-color: rgb(144,168,225, 0.5);
 }
-.topLNavi ul {
+.topLeft {
+    /* 左侧占比 */
+    flex: 1;
     /* 横向排列 */
     display: flex;
     flex-direction: row;
     /* 去除点 */
     list-style: none;
+    /* 高度 */
+    height: 3rem;
 }
-.topLNavi li {
+.topLeft li {
     height: 3rem;
 }
 /* Home键背景 */
-.topLNavi li:first-child {
+.topLeft li:first-child {
     background: linear-gradient(rgb(114, 41, 214, 0.5), rgb(170, 70, 238, 0.6));  /* 背景色 */
 }
 /* Home键 属性 */
-.topLNavi li:first-child a {
+.topLeft li:first-child a {
     display: block;
     padding: 0.65rem 0.7rem;   /* 文字 高度/宽度 */
     color: #90E1A0;             /* 文字颜色 */
-    font-size: 24px;
-    font-family: STXihei, "Microsoft YaHei";
-    font-weight: bold;
+    font: bold 24px STXihei, "Microsoft YaHei";
     text-decoration: none;
 }
+.topRight {
+    /* 右侧占比 */
+    flex: 1;
+    /* 横向排列 */
+    float: right;
+    /* 去除点 */
+    list-style: none;
+    /* 高度 */
+    height: 3rem;
+    /* 右侧对齐 */
+    display: flex;
+    justify-content: flex-end;
+}
+.topRight li {
+    height: 3rem;
+}
 /* 其他按键 属性 */
-.topLNavi li a {
+.topNavi li a {
     transition: all 450ms;
     display: block;     /* 把链接显示为块元素可使整个链接区域可点击 */
     padding: 0.65rem 0.5rem;   /* 文字 高度/宽度 */
     color: #ecffa8;     /* 文字颜色 */
-    font-size: 22px;    /* 文字大小 */
-    font-family: STXihei, "Microsoft YaHei";
+    font: 22px STXihei, "Microsoft YaHei";
     text-decoration-line: none;     /* 去除下划线 */
 }
 /* 其他按键 选中效果 */
-.topLNavi li a:hover:not(.active){
+.topNavi a:hover:not(.home){
     height: 1.7rem;
     /* 圆角 */
     border-radius: 30px;
@@ -74,45 +92,7 @@ body {
 }
 
 
-/*
-顶部导航栏(右侧)
-*/
-.topRNavi {
-    position: absolute;
-    right: 0;           /* 靠右 */
-    width: 20%;         /* 宽度20%*(避免遮挡左侧按键) */
-    height: 3rem;     /* 高度同高 */
-    max-width: 100%;
-}
-.topRNavi ul {
-    display: flex;
-    flex-direction: row;
-    float: right;           /* 右对齐 */
-    list-style: none;
-}
-.topRNavi li {
-    height: 3rem;
-}
-/* Contact按键 属性 */
-.topRNavi li a {
-    display: block;             /* 把链接显示为块元素可使整个链接区域可点击 */
-    padding: 0.8rem 0.5rem;     /* 文字 高度/宽度 */
-    color: #ecffa8;             /* 文字颜色 */
-    overflow: hidden;
-    font-size: 22px;            /* 文字大小 */
-    text-decoration-line: none; /* 去除下划线 */
-}
-/* Contact按键 选中效果 */
-.topRNavi li a:hover {
-    /* 圆角 */
-    border-radius: 30px;
-    /* 背景变色 */
-    background-color: rgb(106, 136, 205);
-    /* 下划线 */
-    text-decoration: underline #ecffa8;
-    /* 动画时间 */
-    transition: all 250ms;
-}
+
 
 /*
 书法名字
