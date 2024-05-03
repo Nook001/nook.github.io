@@ -20,14 +20,13 @@ body {
     position: absolute;
     /* 填充宽度 高度*/
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     /* 背景框毛玻璃效果 */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     /* 背景框颜色 */
     background-color: rgb(144,168,225, 0.5);
 }
-
 .topLeft {
     /* 左侧占比 */
     flex: 1;
@@ -71,8 +70,8 @@ body {
     height: 3rem;
 }
 /* 其他按键 属性 */
-.topNavi li a {
-    transition: all 450ms;
+.topNavi a {
+    transition: all 400ms;
     display: block;     /* 把链接显示为块元素可使整个链接区域可点击 */
     padding: 0.65rem 0.5rem;   /* 文字 高度/宽度 */
     color: #ecffa8;     /* 文字颜色 */
@@ -91,7 +90,6 @@ body {
     /* 动画时间 */
     transition: all 250ms;
 }
-
 
 
 
