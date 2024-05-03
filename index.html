@@ -6,21 +6,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuanzhi Liu</title>
-    <link rel="stylesheet" href="style/index.css">
-    <script src="https://kit.fontawesome.com/202dfade75.js" crossorigin="anonymous"></script>
+
+    <!-- CSS风格文件 -->
+    <link href="css/index.css" rel="stylesheet" />
+
+    <!-- 表格文件 -->
+    <link href="asset/chart/charts.min.css" rel="stylesheet" />
+
+    <!-- 图标文件 -->
+    <link href="asset/css/fontawesome.css" rel="stylesheet" />
+    <link href="asset/css/brands.css" rel="stylesheet" />
+    <link href="asset/css/regular.css" rel="stylesheet" />
+    <link href="asset/css/solid.css" rel="stylesheet" />
+
+
 </head>
 
 
 <body>
 
     <!-- 顶部导航栏(左侧) -->
-    <div class="topNavi">
+    <div class="topNavi" id="1">
 
         <ul class="topLeft">
-            <li><a class="home" href="index.html">Home</a></li>
-            <li><a href="https://github.com/Nook001">GitHub</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/">LinkedIn</a></li>
+            <li><a class="home" href="#1">Home</a></li>
+            <li><a href="#2">Introduce</a></li>
+            <li><a href="#3">Skills</a></li>
+            <li><a href="#4">Project</a></li>
         </ul>
 
         <ul class="topRight">
@@ -29,6 +41,9 @@
     </div>
 
     <!-- 返回顶部按钮 -->
+    <div>
+        <a href="#1" id="up"><button><i class="fa-solid fa-arrow-up fa-lg"></i></button></a>
+    </div>
 
 
 
@@ -38,7 +53,7 @@
     </div>
 
     <!-- 网页介绍 Introduction -->
-    <div class="intro">
+    <div class="intro" id="2">
         <h2>Introduction</h2>
             <p>Hello and welcome to Nook's website.</p>
             <p>This website contains some information about me</p>
@@ -48,7 +63,7 @@
     <div class="about">
 
         <!-- 个人介绍 左侧 -->
-        <div class="left">
+        <div class="aboutLeft">
 
             <!-- 信息栏 -->
             <ul>
@@ -80,32 +95,53 @@
     </div>
 
     <!-- LeetCode数据 -->
-    <div class="leetcode">
-        <h2>My LeetCode</h2>
+    <div class="skill">
+        <h2>Skill</h2>
 
-        <div class="card">
-            <h2>Development Skills</h2>
-            <p class="skill html">
-                <span>HTML</span>
-                <span class="level">90%</span>
-            </p>
-            <p class="skill css">
-                <span>CSS</span>
-                <span class="level">95%</span>
-            </p>
-            <p class="skill javascript">
-                <span>JavaScript</span>
-                <span class="level">80%</span>
-            </p>
-            <p class="skill svg">
-                <span>SVG</span>
-                <span class="level">60%</span>
-            </p>
-            <p class="skill canvas">
-                <span>Canvas</span>
-                <span class="level">75%</span>
-            </p>
+        <div class="chart">
+
+            <table class="charts-css bar show-labels show-primary-axis data-spacing-5">
+                <caption>Programming Skill</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row"> Java </th>
+                        <td style="--size: 0.85;"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> Haskell </th>
+                        <td style="--size: 0.7;"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> Python </th>
+                        <td style="--size: 0.67;"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> HTML </th>
+                        <td style="--size: 0.65;"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> CSS </th>
+                        <td style="--size: 0.65;"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="charts-css bar show-labels show-primary-axis data-spacing-5">
+                <caption>Programming Skill</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row"> CSS </th>
+                        <td style="--size: 0.65;"></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
+
     </div>
 
     <h3>天气预报</h3>
@@ -144,11 +180,7 @@
     </table><hr>
 
 
-    <h3>时事投票</h3>
-    近日,人们对谭松自杀事件发起了投票(多选),<br>
-    <input type="checkbox" name="suicide" id="1"><label for="1">好死好死</label><br>
-    <input type="checkbox" name="suicide" id="2"><label for="2">死了无所谓</label><br>
-    <input type="checkbox" name="suicide" id="3"><label for="3">别死在我们寝室就行</label><hr>
+
 
     对谢晓琳拒绝的看法(单选),<br>
     <label><input type="radio" name="refuse" id="4">支持</label><br>
@@ -189,6 +221,7 @@
         <dd>了解小米</dd>
         <dd>加入小米</dd>
     </dl>
-    
+
+    <script src="js/index.js"></script>
 </body>
 </html>
