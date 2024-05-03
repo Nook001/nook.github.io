@@ -1,0 +1,301 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+
+/*
+背景图片
+*/
+body {
+    background-image: url("../images/moutain2.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+
+/*
+顶部导航栏(左侧)
+*/
+.topNavi {
+    display: flex;
+    justify-content: space-between;
+    /* 位置固定在顶部 */
+    position: absolute;
+    /* 填充宽度 高度*/
+    width: 100%;
+    height: 3rem;
+    /* 背景框毛玻璃效果 */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* 背景框颜色 */
+    background-color: rgb(144,168,225, 0.5);
+}
+.topLeft {
+    /* 左侧占比 */
+    flex: 1;
+    /* 横向排列 */
+    display: flex;
+    flex-direction: row;
+    /* 去除点 */
+    list-style: none;
+    /* 高度 */
+    height: 3rem;
+}
+.topLeft li {
+    height: 3rem;
+}
+/* Home键背景 */
+.topLeft li:first-child {
+    background: linear-gradient(rgb(114, 41, 214, 0.5), rgb(170, 70, 238, 0.6));  /* 背景色 */
+}
+/* Home键 属性 */
+.topLeft li:first-child a {
+    display: block;
+    padding: 0.65rem 0.7rem;   /* 文字 高度/宽度 */
+    color: #90E1A0;             /* 文字颜色 */
+    font: bold 24px STXihei, "Microsoft YaHei";
+    text-decoration: none;
+}
+.topRight {
+    /* 右侧占比 */
+    flex: 1;
+    /* 横向排列 */
+    float: right;
+    /* 去除点 */
+    list-style: none;
+    /* 高度 */
+    height: 3rem;
+    /* 右侧对齐 */
+    display: flex;
+    justify-content: flex-end;
+}
+.topRight li {
+    height: 3rem;
+}
+/* 其他按键 属性 */
+.topNavi a {
+    transition: all 400ms;
+    display: block;     /* 把链接显示为块元素可使整个链接区域可点击 */
+    padding: 0.65rem 0.5rem;   /* 文字 高度/宽度 */
+    color: #ecffa8;     /* 文字颜色 */
+    font: 22px STXihei, "Microsoft YaHei";
+    text-decoration-line: none;     /* 去除下划线 */
+}
+/* 其他按键 选中效果 */
+.topNavi a:hover:not(.home){
+    height: 1.7rem;
+    /* 圆角 */
+    border-radius: 30px;
+    /* 背景变色 */
+    background-color: rgb(106, 136, 205);
+    /* 下划线 */
+    text-decoration: underline #ecffa8;
+    /* 动画时间 */
+    transition: all 250ms;
+}
+
+
+
+/*
+回到顶部
+*/
+/* 位置 */
+#up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+/* 大小 */
+#up button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 3rem;
+    border-color: rgb(174, 174, 174, 0);
+    background-color: rgb(210, 210, 210);
+    cursor: pointer;
+}
+/* 选中效果 */
+#up button:hover {
+    background-color: rgb(57, 57, 57);
+    color: white;
+}
+
+
+/*
+书法名字
+*/
+.name {
+    height: 85VH;
+    padding: 12VH;
+    text-align: center;
+}
+.name img {
+    padding: 0;
+    height: 89.5VH;
+    max-height: 100%;
+}
+
+
+
+/*
+网页介绍 Introduction
+*/
+/* 介绍 背景 */
+.intro {
+    height: 25VH;
+    background-color: rgb(27, 33, 45);     /* 背景色 */
+}
+/* 介绍 标题 */
+.intro h2 {
+    padding-top: 1rem;  /* 离边框顶部高度 */
+    width: 100%;    /* 宽度 */
+    height: 2rem;   /* 高度 */
+    text-align: center;     /* 居中 */
+    font: bold 36px STXihei, "Microsoft YaHei";    /* 字体 */
+    color: antiquewhite;
+}
+/* 介绍 内容 */
+.intro p {
+    padding-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font: 21px/1.0 STXihei, "Microsoft YaHei";
+    color: antiquewhite;
+}
+
+
+/*
+个人介绍 About
+*/
+/* 介绍 背景 */
+.about {
+    display: flex;
+    width: 100%;
+    height: 85VH;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248,244,244);     /* 背景色 */
+}
+/* 介绍 左侧 */
+.aboutLeft {
+    flex: 1;
+    margin-top: 1rem;  /* 离边框顶部距离 */
+    width: 100%;
+}
+/* 信息栏 */
+.about ul {
+    width: 60%;      /* 总宽度 */
+    margin: 0 20%;   /* 两侧空白 */
+}
+.about li {
+    list-style: none;   /* 去除li的点 */
+    padding-top: 1rem;  /* 行距 */
+    padding-bottom: 0.5rem; /* 下划线距离 */
+    text-align: left;   /* 左侧对齐 */
+    font: 18px STXihei, "Microsoft YaHei";
+    color: rgb(27, 33, 45);
+    border-bottom: 2px solid rgb(220,220,220);  /* 下划线 */
+}
+/* 按钮栏 位置*/
+.btn {
+    margin: 1.5rem 25%;
+    display: flex;
+    justify-content: space-between; /* 均匀排列 */
+}
+/* 按钮栏 属性 */
+.btn button {
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    background-color: rgb(248,244,244);
+    border-radius: 15px;    /* 圆角 */
+    border-color: black;    /* 边框颜色 */
+    transition: all 270ms;  /* 动画速度 */
+}
+/* 按钮栏 选中效果 */
+.btn button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.25) translateY(-5px);    /* 放大 上移 */
+    transition: all 270ms;
+}
+/* 介绍 右侧 */
+.about p {
+    flex: 1.6;  /* Set left-right ratio in golden ratio 1:1.6 */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    text-align: left;   /* 左侧对齐 */
+    font: 20px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    color: rgb(146,146,146);
+    overflow: hidden;
+}
+/* slide in anime */
+.about-l-animation {
+    animation: slideL 1.3s 1;
+}
+.about-p-animation {
+    /* 动画 */
+    animation: slideP 1.3s 1;
+}
+@keyframes slideP {
+    from {
+        margin-top: 10%;
+        opacity: 0;
+    }
+    to {
+        margin-top: 2rem;
+        opacity: 100%;
+    }
+}
+@keyframes slideL {
+    from {
+        margin-top: 10%;
+        opacity: 0;
+    }
+    to {
+        margin-top: 1rem;
+        opacity: 100%;
+    }
+}
+
+/*
+LeetCode数据
+*/
+/*  */
+.skill {
+    width: 100%;
+    height: 100VH;
+    margin: 0;
+    background-color: rgb(248,244,244);     /* 背景色 */
+}
+.skill h2 {
+    margin-left: 3rem;
+    font: bold 28px STXihei, "Microsoft YaHei";    /* 字体 */
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 2rem 5rem;
+}
+
+.chart .bar {
+    --color: rgba(90,165,255,0.5);
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
