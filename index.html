@@ -11,13 +11,13 @@
     <link href="css/index.css" rel="stylesheet" />
 
     <!-- 表格文件 -->
-    <link href="asset/chart/charts.min.css" rel="stylesheet" />
+    <link href="asset/ChartCss/charts.min.css" rel="stylesheet" />
 
     <!-- 图标文件 -->
-    <link href="asset/css/fontawesome.css" rel="stylesheet" />
-    <link href="asset/css/brands.css" rel="stylesheet" />
-    <link href="asset/css/regular.css" rel="stylesheet" />
-    <link href="asset/css/solid.css" rel="stylesheet" />
+    <link href="asset/AwesomeFont/css/fontawesome.css" rel="stylesheet" />
+    <link href="asset/AwesomeFont/css/brands.css" rel="stylesheet" />
+    <link href="asset/AwesomeFont/css/regular.css" rel="stylesheet" />
+    <link href="asset/AwesomeFont/css/solid.css" rel="stylesheet" />
 
 
 </head>
@@ -41,6 +41,11 @@
     </div>
 
     <!-- 返回顶部按钮 -->
+    <!--
+    1: Home
+    2: Introduction
+    3: Skill
+     -->
     <div>
         <a href="#1" id="up"><button><i class="fa-solid fa-arrow-up fa-lg"></i></button></a>
     </div>
@@ -96,7 +101,7 @@
 
     <!-- LeetCode数据 -->
     <div class="skill" id="3">
-        <h2>Skill</h2>
+        <h2>Skills</h2>
 
         <div class="chart">
 
@@ -104,123 +109,43 @@
                 <caption>Programming Skill</caption>
                 <tbody>
                     <tr>
-                        <th scope="row"> Java </th>
-                        <td style="--size: 0.85;"></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row"> Haskell </th>
-                        <td style="--size: 0.7;"></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row"> Python </th>
-                        <td style="--size: 0.67;"></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row"> HTML </th>
-                        <td style="--size: 0.65;"></td>
-                    </tr>
-
-                    <tr>
                         <th scope="row"> CSS </th>
                         <td style="--size: 0.65;"></td>
                     </tr>
                 </tbody>
             </table>
 
-            <table class="charts-css bar show-labels show-primary-axis data-spacing-5">
-                <caption>Programming Skill</caption>
+            <!-- 编程语言 柱状图 -->
+            <table class="charts-css bar show-labels show-primary-axis show-data-axes data-spacing-5">
+                <caption>LeetCode Record</caption>
                 <tbody>
                     <tr>
-                        <th scope="row"> CSS </th>
-                        <td style="--size: 0.65;"></td>
+                        <th scope="row"> Easy </th>
+                        <td style="--size: 0.4; --color: rgb(5, 125, 0)"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> Medium </th>
+                        <td style="--size: 0.2; --color: rgb(238, 182, 1)"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"> Hard </th>
+                        <td style="--size: 0.1; --color: rgb(219, 53, 34)"></td>
                     </tr>
                 </tbody>
             </table>
+
 
         </div>
 
     </div>
 
-    <h3>天气预报</h3>
-    <table>
-        <thead>
-        <tr>
-            <th>城市</th>
-            <th>今天</th>
-            <th>明天</th>
-            <th>后天</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr>
-            <th>长沙</th>
-            <td>多云</td>
-            <td>小雨</td>
-            <td>沙尘暴</td>
-        </tr>
-            
-        <tr>
-            <th>伦敦</th>
-            <td>暴雨</td>
-            <td>小雪</td>
-            <td>沙尘暴</td>
-        </tr>
-
-        <tr>
-            <th>莫斯科</th>
-            <td>晴</td>
-            <td>小雨</td>
-            <td>沙尘暴</td>
-        </tr>
-        </tbody><br>
-    </table><hr>
-
-
-
-
-    对谢晓琳拒绝的看法(单选),<br>
-    <label><input type="radio" name="refuse" id="4">支持</label><br>
-    <label><input type="radio" name="refuse" id="5">非常支持</label><br>
-    <label><input type="radio" name="refuse" id="6">完全支持</label><hr>
-        
-    文件上传,<br>
-    <input type="file" multiple><hr>
-
-
-    <h3>时事评论</h3>
-        对谭松被拒的看法: <input type="text" placeholder="随便写">
-        对谭松自杀的看法: <input type="text" placeholder="赞同"><hr>
-
-
-    <h3>表单</h3>
-    <select>
-        <option selected>好似</option>
-        <option>好似喵</option>
-        <option>好似捏</option>
-    </select><hr>
-
-
-    <h3>长评论</h3>
-    <textarea placeholder="say something"></textarea>
-
-
-    <dl>
-        <dt>服务中心</dt>
-        <dd>申请售后</dd>
-        <dd>售后政策</dd>
-
-        <dt>线下门店</dt>
-        <dd>小米之家</dd>
-        <dd>服务网点</dd>
-
-        <dt>关于</dt>
-        <dd>了解小米</dd>
-        <dd>加入小米</dd>
-    </dl>
+    <div class="construction">
+        Under construction
+        <br>
+        建设中
+    </div>
 
     <script src="js/index.js"></script>
 </body>
