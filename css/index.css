@@ -176,7 +176,7 @@ body {
 .about {
     display: flex;
     width: 100%;
-    height: 85VH;
+    height: 75VH;
     margin: 0;
     padding: 0;
     background-color: rgb(248,244,244);     /* 背景色 */
@@ -266,29 +266,46 @@ body {
 }
 
 /*
-LeetCode数据
+技能图表 Skill
 */
-/*  */
 .skill {
     width: 100%;
     height: 100VH;
     margin: 0;
     background-color: rgb(248,244,244);     /* 背景色 */
 }
+/* 标题 */
 .skill h2 {
+    padding-top: 2rem;
+    letter-spacing: 1px;
     margin-left: 3rem;
     font: bold 28px STXihei, "Microsoft YaHei";    /* 字体 */
 }
-
+/* 表格布局 */
 .chart {
     display: flex;
     justify-content: space-between;
-
     margin: 2rem 5rem;
+}
+/* 表格宽度 */
+.chart table{
+    width: 30%;
 }
 
 .chart .bar {
     --color: rgba(90,165,255,0.5);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: rgb(199,199,199);
+    box-shadow: 2px 3px 3px RGB(144,144,144);
+}
+
+
+.construction{
+    width: 100%;
+    height: 10rem;
+    background-color: white;
+    flex: 50px;
 }
 
 
