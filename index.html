@@ -25,17 +25,23 @@
 
 <body>
 
-    <!-- 顶部导航栏(左侧) -->
+    <!-- 顶部导航栏 -->
     <div class="topNavi" id="1">
 
+        <!-- 图标 -->
+        <div class="logo"></div>
+
+        <!-- 左侧 -->
         <ul class="topLeft">
-            <li><a class="home" href="#1">Home</a></li>
+            <li><a href="#1">Home</a></li>
             <li><a href="#2">Introduce</a></li>
             <li><a href="#3">Skills</a></li>
             <li><a href="#4">Project</a></li>
         </ul>
 
+        <!-- 右侧 -->
         <ul class="topRight">
+
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
@@ -105,33 +111,60 @@
 
         <div class="chart">
 
-            <table class="charts-css bar show-labels show-primary-axis data-spacing-5">
+            <!-- 编程语言 饼状图 -->
+            <table class="charts-css pie show-heading ">
                 <caption>Programming Skill</caption>
                 <tbody>
+                    <!--Java 54%-->
                     <tr>
-                        <th scope="row"> CSS </th>
-                        <td style="--size: 0.65;"></td>
+                        <td style="--start: 0; --end: 0.54;"><span class="data"> Java </span></td>
                     </tr>
+
+                    <!--Haskell 21%-->
+                    <tr>
+                        <td style="--start: 0.54; --end: 0.75;"><span class="data"> Haskell </span></td>
+                    </tr>
+
+                    <!--Python 9%-->
+                    <tr>
+                        <td style="--start: 0.75; --end: 0.84;"><span class="data"> Python </span></td>
+                    </tr>
+
+                    <!--HTML 7%-->
+                    <tr>
+                        <td style="--start: 0.84; --end: 0.91;"><span class="data"> HTML </span></td>
+                    </tr>
+
+                    <!--CSS 7%-->
+                    <tr>
+                        <td style="--start: 0.91; --end: 0.98;"><span class="data"> CSS </span></td>
+                    </tr>
+
+                    <!--JavaScript 2%-->
+                    <tr>
+                        <td style="--start: 0.98; --end: 1;"><span class="data"> JS </span></td>
+                    </tr>
+
                 </tbody>
             </table>
 
-            <!-- 编程语言 柱状图 -->
-            <table class="charts-css bar show-labels show-primary-axis show-data-axes data-spacing-5">
+            <!-- LeetCode 柱状图 -->
+            <table class="charts-css bar show-heading show-labels show-primary-axis show-data-axes data-outside data-spacing-5">
                 <caption>LeetCode Record</caption>
                 <tbody>
                     <tr>
                         <th scope="row"> Easy </th>
-                        <td style="--size: 0.4; --color: rgb(5, 125, 0)"></td>
+                        <td style="--size: 0.4; --color: rgb(5, 125, 0)"><span class="data"> 4 </span></td>
                     </tr>
 
                     <tr>
                         <th scope="row"> Medium </th>
-                        <td style="--size: 0.2; --color: rgb(238, 182, 1)"></td>
+                        <td style="--size: 0.2; --color: rgb(238, 182, 1)"><span class="data"> 2 </span></td>
                     </tr>
 
                     <tr>
                         <th scope="row"> Hard </th>
-                        <td style="--size: 0.1; --color: rgb(219, 53, 34)"></td>
+                        <td style="--size: 0.1; --color: rgb(219, 53, 34)"><span class="data"> 1 </span></td>
                     </tr>
                 </tbody>
             </table>
