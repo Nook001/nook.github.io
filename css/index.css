@@ -25,7 +25,7 @@ body {
     /* 弹性盒子 */
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+
     /* 位置固定在顶部 */
     position: absolute;
     /* 填充宽度 高度*/
@@ -79,7 +79,7 @@ body {
     background-image: url("../images/nook.png");
     background-size: 3.5rem auto;
     background-repeat: no-repeat;
-    background-position: 1.3rem center;
+    background-position: center center;
 }
 
 /*
