@@ -25,11 +25,12 @@ body {
     /* 弹性盒子 */
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     /* 位置固定在顶部 */
     position: absolute;
     /* 填充宽度 高度*/
     width: 100VW;
-    height: 3rem;
+    height: 2.5rem;
     max-width:100%;
     /* 背景框毛玻璃效果 */
     backdrop-filter: blur(8px);
@@ -40,20 +41,30 @@ body {
     font: 23px STXihei, "Microsoft YaHei";
 }
 
+
 /* 按键 属性 */
 .topNavi a {
     transition: all 400ms;      /* 动画速度 */
-    display: block;             /* 把链接显示为块元素 使整个链接区域可点击 */
-    text-align: center;
-    padding: 19px 0.5rem;
-
+    padding: 13px 0.3rem;          /* 字体垂直居中 */     /* 字体垂直居中 */
     color: #ecffa8;             /* 文字颜色 */
     text-decoration-line: none; /* 去除下划线 */
 }
+
+.topNavi li {
+    padding: 13px 0;
+}
+
+.topLeft li:before {
+    content: "";
+    margin: 0.3rem;
+    border: 1px solid #d3d3d3;
+    align-self: center;
+}
+
 /* 按键 选中效果 */
 .topNavi a:hover{
     /* 圆角 */
-    border-radius: 30px;
+    border-radius: 20px;
     /* 背景变色 */
     background-color: rgb(106, 136, 205);
     /* 下划线 */
@@ -62,10 +73,11 @@ body {
     transition: all 250ms;
 }
 
+
 .logo{
     flex: 1;
     background-image: url("../images/nook.png");
-    background-size: 5rem auto;
+    background-size: 3.5rem auto;
     background-repeat: no-repeat;
     background-position: center center;
 }
