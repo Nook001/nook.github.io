@@ -144,13 +144,14 @@ body {
 书法名字
 */
 .name {
-    height: 50VH;
+    height: 30VH;
     padding: 50VH;
+    max-height: 100%;
     text-align: center;
 }
 .name img {
     padding: 0;
-    width: 40vw;
+    height: 30vh;
     max-height: 100%;
 }
 
