@@ -34,16 +34,13 @@
         <!-- 图标 -->
         <div class="logo"></div>
 
-        <!-- 左侧 -->
-
-
-        <!-- 右侧 -->
+        <!-- 右侧按键 -->
         <ul class="topRight">
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" id="contact">Contact</a></li>
             <li><a href="#4">Project</a></li>
             <li><a href="#3">Skills</a></li>
             <li><a href="#2">Introduce</a></li>
-            <li><a href="#1" id="home">Home</a></li>
+            <li><a href="#1">Home</a></li>
         </ul>
     </div>
 
@@ -61,7 +58,7 @@
 
     <!-- 首页 书法名字 -->
     <div class="name">
-        <img src="images/name2.png" alt="my name" />
+        <img src="images/name.png" alt="my name" />
     </div>
 
     <!-- 网页介绍 Introduction -->
@@ -71,42 +68,105 @@
     </div>
 
     <!-- 个人介绍 About -->
-    <div class="about">
+    <section class="about-section">
+        <div class="about">
 
-        <!-- 个人介绍 左侧 -->
-        <div class="aboutLeft">
+            <!-- 个人介绍 左侧 -->
+            <div class="aboutLeft">
 
-            <!-- 信息栏 -->
-            <ul>
-                <li> <b>NAME:</b>       <span class="tableR">Liu Yuanzhi(Nook)</span></li>
-                <li> <b>PRONOUNS:</b>   <span class="tableR">He/His/Him</span></li>
-                <li> <b>SCHOOL:</b>     <span class="tableR">University of Warwick</span></li>
-                <li> <b>DOB:</b>        <span class="tableR">2004/07</span></li>
-                <li> <b>HOMETOWN:</b>   <span class="tableR">Hunan, China</span></li>
-            </ul>
+                <!-- 信息栏 -->
+                <ul>
+                    <li> <b>NAME:</b>       <span class="tableR">Liu Yuanzhi(Nook)</span></li>
+                    <li> <b>PRONOUNS:</b>   <span class="tableR">He/His/Him</span></li>
+                    <li> <b>SCHOOL:</b>     <span class="tableR">University of Warwick</span></li>
+                    <li> <b>DOB:</b>        <span class="tableR">2004/07</span></li>
+                    <li> <b>HOMETOWN:</b>   <span class="tableR">Hunan, China</span></li>
+                </ul>
 
-            <!-- 按钮栏 -->
-            <div class="btn">
-                <a href="https://github.com/Nook001"><button><i class="fa-brands fa-github"></i></button></a>
-                <a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
-                <a href="mailto:Nook_lyz@outlook.com"><button><i class="fa-regular fa-envelope"></i></button></a>
+                <!-- 按钮栏 -->
+                <div class="btn">
+                    <a href="https://github.com/Nook001"><button><i class="fa-brands fa-github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                    <a href="mailto:Nook_lyz@outlook.com"><button><i class="fa-regular fa-envelope"></i></button></a>
+                </div>
+            </div>
+
+            <!-- 个人介绍 右侧 -->
+            <div class="aboutRight">
+                <p>
+                    I am an international student enrolling in 2023 at the University of Warwick.
+                    I am currently studying for an undergraduate degree in Computer Science.
+                    My main programming languages are Java, Haskell and Python,
+                    and I can also write front-end code using HTML and CSS.
+                    My main interest is software engineering.<br><br>
+
+                    After school, I volunteer in various activities held by Warwick Volunteer and am interested in making computer games.
+                </p>
             </div>
         </div>
+    </section>
 
-        <!-- 个人介绍 右侧 -->
-        <p>
-            I am an international student enrolling in 2023 at the University of Warwick.
-            I am currently studying for an undergraduate degree in Computer Science.
-            My main programming languages are Java, Haskell and Python,
-            and I can also write front-end code using HTML and CSS.
-            My main interest is software engineering.<br><br>
 
-            After school, I volunteer in various activities held by Warwick Volunteer and am interested in making computer games.
-        </p>
-    </div>
+    <!-- 教育经历 Education -->
+    <section class="timeline-section">
+
+        <h2>Skills</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-empty"></div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="title">University of Warwick</div>
+                <div class="time">BSc of Computer Science | 2023-2026</div>
+                <br>
+                <p><span>Main Course:</span>Functional Programming, Linear Algebra, Discrete Math, Data Structure, Computer Security, Computer Architecture, OOP</p>
+            </div>
+
+            <div class="timeline-content">
+                <div class="title">The Worthgate School</div>
+                <div class="time">University Foundation Program | 2022-2023</div>
+                <br>
+                <p><span>Subjects:</span>Mathematics(A*), Physics(A*), Chemistry(A*)</p>
+                <p><span>Award:</span></p>
+            </div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+
+            <div class="timeline-empty"></div>
+
+            <div class="timeline-empty"></div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="title">Changjun High School</div>
+                <div class="time">High School | 2016-2022</div>
+                <br>
+                <p><span>Subjects:</span>Chinese, Mathematics, English, Physics, Chemistry, Biology</p>
+            </div>
+
+            <div class="timeline-end"></div>
+
+            <div class="timeline-end-middle">
+                <div class="timeline-circle"></div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- LeetCode数据 -->
     <div class="skill" id="3">
+
         <h2>Skills</h2>
 
         <div class="chart">
