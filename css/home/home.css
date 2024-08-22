@@ -1,0 +1,135 @@
+/* 顶部导航栏 */
+.topNavi {
+    /* 弹性盒子 两侧对齐*/
+    display: flex;
+    justify-content: space-between;
+
+    /* 位置固定在顶部 */
+    position: absolute;
+
+    /* 宽度 高度*/
+    max-width:100%;
+    width: 100VW;
+
+    height: 60px;
+
+    /* 背景框毛玻璃效果 */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    /* 背景框颜色 */
+    background-image: linear-gradient(110deg, rgb(242, 242, 242, 0.9) 0%, rgb(190, 190, 190, 0.9) 95%);
+
+    /* 内嵌阴影 */
+    box-shadow: 0 -3px 6px rgb(194, 194, 194) inset;
+
+    /* 字体 */
+    font: 23px bold Arial, sans-serif;
+}
+
+
+
+/* Logo */
+.home .logo{
+    flex: 1;
+    align-content: center;
+}
+
+.home .logo img{
+    padding-left: 5rem;
+    width: 4.5rem;
+    height: auto;
+}
+
+
+
+/* Buttons */
+
+
+/* Button bar */
+.home .buttons {
+    flex: 1;
+
+    height: 60px;
+    align-items: center;
+}
+
+
+/* Button Container */
+.home .buttons ul{
+    /* 横向排列 从右到左 */
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    /* 去除点 */
+    list-style: none;
+    /* 高度 */
+    height: 60px;
+}
+
+
+/* Individual Button */
+.home .buttons ul li {
+    /* Border */
+    border-width: 0 1px;
+    border-color: rgba(232, 232, 232, 0.2);
+    border-style: solid;
+
+    /* Background */
+    background-color: transparent;
+
+    /* Position*/
+    text-align: center; /* 居中对齐 */
+    padding: 0 10px;    /* 按钮间距 */
+
+    /* 高度 */
+    height: 45px;
+    line-height: 45px;
+}
+.home .buttons ul li:first-child {
+    color: rgb(74, 74, 74);
+    background-color: rgb(168, 168, 168);
+    border-radius: 10px;
+}
+
+
+/* Button Text */
+.home .buttons ul li a {
+    color: rgb(74, 74, 74);         /* Color */
+    text-decoration-line: none;     /* 去除下划线 */
+}
+
+
+/* Button Hover */
+.home .buttons ul li:hover:not(:first-child){
+    /* 圆角 */
+    border-radius: 15px;
+    /* 背景变色 */
+    background-color: rgb(147, 167, 214);
+    /* 文字变色 */
+    color: rgb(255, 255, 255);
+    /* 动画时间 */
+    transition: background-color 300ms,color 300ms;
+    cursor: pointer;
+}
+
+/* Name Image */
+.home .name {
+    height: 80VH;
+    padding: 15VH;
+    max-height: 100%;
+    text-align: center;
+}
+.home .name img {
+    padding: 0;
+    height: 80vh;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+

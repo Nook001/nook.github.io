@@ -1,0 +1,107 @@
+/*
+教育经历
+*/
+.timeline-section {
+    background: linear-gradient(rgb(18, 18, 18), 93%, rgb(92, 90, 90), 98%, rgb(248,244,244));
+}
+
+/* 标题 */
+.timeline-section h2 {
+    color: white;
+    padding-top: 2rem;
+    letter-spacing: 1px;
+    margin-left: 3rem;
+    font: bold 28px STXihei, "Microsoft YaHei";    /* 字体 */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-content {
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(25, 25, 25);
+    box-shadow: rgba(230, 230, 230, 0.6) 0px 10px 15px, rgba(230, 230, 230, 0.6) 0px 3px 3px;
+
+    border-radius: 5px;
+
+    padding: 1rem 1rem;
+    margin: 1rem 1rem 20px;
+
+    overflow-wrap: break-word !important;
+}
+
+.timeline-content .title {
+    color: white;
+    font: 28px bold Arial, sans-serif;
+}
+
+.timeline-content .time {
+    color: rgb(173, 173, 173);
+    font: 16px Arial sans-serif;
+    font-style: italic;
+}
+
+.timeline-content p {
+    color: rgb(214, 214, 214);
+    font: 18px Arial sans-serif;
+}
+
+.timeline-content p span {
+    color: rgb(237, 237, 237);
+    font: 22px Arial sans-serif;
+}
+
+.timeline-end {
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0);
+    height: 250px;
+    overflow-wrap: break-word !important;
+}
+
+.timeline-end-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, rgb(248,244,244), #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+        position: relative;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        width: 3px;
+        height: 100%;
+    }
+    .main-middle {
+        opacity: 0;
+    }
+    .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}

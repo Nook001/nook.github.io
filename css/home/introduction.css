@@ -1,0 +1,145 @@
+/* Area size */
+.introduction {
+    background-color: rgb(248,244,244);     /* 背景色 */
+    max-width: 100%;
+    width: 100vw;
+    height: 30rem;
+}
+
+
+
+/* Web Introduction */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    max-width: 100%;
+    width: 100vw;
+    height: 6rem;
+
+    background-color: rgb(27, 33, 45);     /* 背景色 */
+}
+
+/* Title */
+.intro h2 {
+    /* 离边框顶部高度 */
+    width: 100%;    /* 宽度 */
+    height: 2rem;   /* 高度 */
+    text-align: center;     /* 居中 */
+    font: bold 36px STXihei, "Microsoft YaHei";    /* 字体 */
+    color: antiquewhite;
+}
+
+/* Content */
+.intro p {
+    padding-bottom: 0.3rem;
+    width: 100%;
+    text-align: center;
+    font: 21px/1.0 STXihei, "Microsoft YaHei";
+    color: antiquewhite;
+}
+
+
+
+
+/* Information Board */
+.informationBoard {
+    height: 24rem;
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* 左侧 */
+.boardLeft {
+    margin-top: 40px;
+
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+}
+/* 信息栏 */
+.boardLeft ul {
+    width: 15rem;      /* 总宽度 */
+}
+
+.boardLeft li {
+    list-style: none;           /* 去除li的点 */
+    padding-top: 1rem;          /* 行距 */
+    padding-bottom: 0.5rem;     /* 下划线距离 */
+    border-bottom: 2px solid rgb(220,220,220);  /* 下划线 */
+    text-align: left;           /* 左侧对齐 */
+    font: 18px STXihei, "Microsoft YaHei";
+    color: rgb(27, 33, 45);
+}
+
+
+/* 按钮栏 位置*/
+.boardLeft .buttons {
+    margin-top: 1.5rem;
+    width: 15rem;      /* 总宽度 */
+    display: flex;
+    flex-direction: row;            /* 按行排列 */
+    justify-content: space-around;  /* 均匀排列 */
+}
+
+/* 按钮栏 属性 */
+.boardLeft .buttons button {
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    background-color: rgb(248,244,244);
+    border-radius: 15px;    /* 圆角 */
+    border-color: black;    /* 边框颜色 */
+    transition: all 270ms;  /* 动画速度 */
+}
+/* 按钮栏 选中效果 */
+.boardLeft .buttons button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.25) translateY(-5px);    /* 放大 上移 */
+    transition: all 250ms;
+}
+
+
+
+
+
+/* 介绍 右侧 */
+.boardRight {
+    margin-top: 40px;
+
+    flex: 1.6;  /* Set left-right ratio in golden ratio 1:1.6 */
+
+    /*margin-top: 2rem;*/
+    text-align: left;   /* 左侧对齐 */
+    font: 20px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    color: rgb(146,146,146);
+}
+
+.boardRight p {
+    max-width: 30rem;
+}
+
+
+
+/* slide in anime */
+.slideInAnimation {
+    animation: slideIn 1s 1;
+}
+
+@keyframes slideIn {
+    from {
+        margin-top: 250px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 100%;
+    }
+}
