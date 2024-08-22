@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <!-- Title of page tag/标签页标题-->
 <head>
@@ -8,7 +8,11 @@
     <title>Yuanzhi Liu</title>
 
     <!-- CSS风格文件 -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/home/index.css" rel="stylesheet" />
+    <link href="css/home/home.css" rel="stylesheet">
+    <link href="css/home/introduction.css" rel="stylesheet">
+    <link href="css/home/education.css" rel="stylesheet">
+    <link href="css/home/project.css" rel="stylesheet">
 
     <!-- 表格文件 -->
     <link href="asset/ChartCss/charts.min.css" rel="stylesheet" />
@@ -23,26 +27,11 @@
     <link href="asset/AwesomeFont/css/solid.css" rel="stylesheet" />
 
 
+
 </head>
 
 
 <body>
-
-    <!-- 顶部导航栏 -->
-    <div class="topNavi" id="1">
-
-        <!-- 图标 -->
-        <div class="logo"></div>
-
-        <!-- 右侧按键 -->
-        <ul class="topRight">
-            <li><a href="contact.html" id="contact">Contact</a></li>
-            <li><a href="#4">Project</a></li>
-            <li><a href="#3">Skills</a></li>
-            <li><a href="#2">Introduce</a></li>
-            <li><a href="#1">Home</a></li>
-        </ul>
-    </div>
 
     <!-- 返回顶部按钮 -->
     <!--
@@ -55,24 +44,51 @@
     </div>
 
 
+    <!-- Home 网站主页 -->
+    <section class="home">
 
-    <!-- 首页 书法名字 -->
-    <div class="name">
-        <img src="images/name.png" alt="my name" />
-    </div>
+        <!-- 顶部导航栏 -->
+        <div class="topNavi" id="1">
+            <!-- 左侧 图标 -->
+            <div class="logo">
+                <img src="images/nook.png" alt="my name">
+            </div>
 
-    <!-- 网页介绍 Introduction -->
-    <div class="intro" id="2">
-        <h2>Introduction</h2>
+            <!-- 右侧 按键 -->
+            <div class="buttons">
+                <ul>
+                    <li id="contact"><a href="contact.html">Contact</a></li>
+                    <li><a href="#4">Project</a></li>
+                    <li><a href="#3">Skills</a></li>
+                    <li><a href="#2">Introduce</a></li>
+                    <li><a href="#1">Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 书法名字 -->
+        <div class="name">
+            <img src="images/name.png" alt="my name" />
+        </div>
+
+    </section>
+
+
+
+    <!-- Introduction 介绍 -->
+    <section class="introduction">
+
+        <!-- 网页介绍 -->
+        <div class="intro" id="2">
+            <h2>Introduction</h2>
             <p>Hello and welcome to Nook's website. <br> <br>This website contains some information about me</p>
-    </div>
+        </div>
 
-    <!-- 个人介绍 About -->
-    <section class="about-section">
-        <div class="about">
+        <!-- 信息板 -->
+        <div class="informationBoard">
 
-            <!-- 个人介绍 左侧 -->
-            <div class="aboutLeft">
+            <!-- 左侧 信息栏 -->
+            <div class="boardLeft">
 
                 <!-- 信息栏 -->
                 <ul>
@@ -84,7 +100,7 @@
                 </ul>
 
                 <!-- 按钮栏 -->
-                <div class="btn">
+                <div class="buttons">
                     <a href="https://github.com/Nook001"><button><i class="fa-brands fa-github"></i></button></a>
                     <a href="https://www.linkedin.com/in/%E8%BF%9C%E5%BF%97-%E5%88%98-539146252/"><button><i class="fa-brands fa-linkedin-in"></i></button></a>
                     <a href="mailto:Nook_lyz@outlook.com"><button><i class="fa-regular fa-envelope"></i></button></a>
@@ -92,15 +108,18 @@
             </div>
 
             <!-- 个人介绍 右侧 -->
-            <div class="aboutRight">
+            <div class="boardRight">
                 <p>
                     I am an international student enrolling in 2023 at the University of Warwick.
-                    I am currently studying for an undergraduate degree in Computer Science.
-                    My main programming languages are Java, Haskell and Python,
-                    and I can also write front-end code using HTML and CSS.
-                    My main interest is software engineering.<br><br>
+                    I am currently studying for an undergraduate degree in Computer Science but taking some economy courses as well.
+                    I mainly program with Java, Haskell and Python,
+                    and design front-end pages using HTML and CSS.
+                    I'm recently developing applications based on JavaFX, MySQL and CSS.
+                    My main interest is building efficient tools for solving problems in real life. <br><br>
 
-                    After school, I volunteer in various activities held by Warwick Volunteer and am interested in making computer games.
+                    After school, I volunteer in various activities held by Nature Conservation Volunteer in Warwick and I have accumulated more than 20h volunteering time. <br><br>
+
+                    If you need to build some tools for improving your working efficiency, feel free to contact me :)
                 </p>
             </div>
         </div>
@@ -110,7 +129,7 @@
     <!-- 教育经历 Education -->
     <section class="timeline-section">
 
-        <h2>Skills</h2>
+        <h2>Education</h2>
 
         <div class="timeline">
 
@@ -164,8 +183,9 @@
 
     </section>
 
+
     <!-- LeetCode数据 -->
-    <div class="skill" id="3">
+    <section class="skill" id="3">
 
         <h2>Skills</h2>
 
@@ -204,7 +224,6 @@
                     <tr>
                         <td style="--start: 0.98; --end: 1;"><span class="data"> JS </span></td>
                     </tr>
-
                 </tbody>
             </table>
 
@@ -214,17 +233,17 @@
                 <tbody>
                     <tr>
                         <th scope="row"> Easy </th>
-                        <td style="--size: 0.4; --color: rgb(5, 125, 0)"><span class="data"> 4 </span></td>
+                        <td style="--size: 1; --color: rgb(5, 125, 0)"><span class="data"> 20 </span></td>
                     </tr>
 
                     <tr>
                         <th scope="row"> Medium </th>
-                        <td style="--size: 0.2; --color: rgb(238, 182, 1)"><span class="data"> 2 </span></td>
+                        <td style="--size: 0.2; --color: rgb(238, 182, 1)"><span class="data"> 4 </span></td>
                     </tr>
 
                     <tr>
                         <th scope="row"> Hard </th>
-                        <td style="--size: 0.1; --color: rgb(219, 53, 34)"><span class="data"> 1 </span></td>
+                        <td style="--size: 0.05; --color: rgb(219, 53, 34)"><span class="data"> 1 </span></td>
                     </tr>
                 </tbody>
             </table>
@@ -232,7 +251,69 @@
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- Project 项目 -->
+    <section class="projects" id="4">
+
+        <h2>Projects</h2>
+
+        <div class="projectRow">
+
+            <div class="project">
+                <!-- Title -->
+                <p class="title">
+                    SolidWorks File Packer
+                </p>
+
+                <!-- Image -->
+                <img src="images/packer.png"  alt="project packer"/>
+
+                <!-- Description -->
+                <p class="description">
+                This is a design graph packer for SolidWorks
+                </p>
+            </div>
+
+            <div class="project">
+                <!-- Title -->
+                <p class="title">
+                    Management System
+                </p>
+
+                <!-- Image -->
+                <img src="images/management.png"  alt="project packer"/>
+
+                <!-- Description -->
+                <p class="description">
+                    This a management system for a mental counselling Inc.
+                    It can manage client and staff's data.
+                    User can create new appointment and record new order on it.
+                    It will generate a dashboard in the homepage to help manager know the situation of the Inc.
+                </p>
+            </div>
+
+            <div class="project">
+
+                <!-- Title -->
+                <p class="title">
+                    Management System
+                </p>
+
+                <!-- Image -->
+                <img src="images/packer.png"  alt="project packer"/>
+
+                <!-- Description -->
+                <p class="description">
+
+                </p>
+            </div>
+        </div>
+
+
+
+    </section>
 
     <div class="construction">
         Under construction
