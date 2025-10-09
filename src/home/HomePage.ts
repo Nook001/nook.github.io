@@ -178,7 +178,7 @@ export class HomePage {
 
     // Warwick 胶囊 - 淡紫色文字和logo
     new Capsule('warwick-capsule', {
-      logoSrc: 'public/warwick_logo.svg',
+      logoSrc: 'warwick_logo.svg',
       text: 'Warwick',
       alt: 'University of Warwick',
       customTextColor: '#8a7fe3', // 淡紫色
@@ -187,7 +187,7 @@ export class HomePage {
 
     // HKUST 胶囊 - HKUST蓝色文字
     new Capsule('hkust-capsule', {
-      logoSrc: 'public/hkust_logo.svg',
+      logoSrc: 'hkust_logo.svg',
       text: 'HKUST',
       alt: 'Hong Kong University of Science and Technology',
       customTextColor: '#003974' // HKUST蓝色

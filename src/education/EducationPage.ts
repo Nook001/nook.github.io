@@ -79,7 +79,7 @@ export class EducationPage {
     new EducationCard('warwick-education', {
       school: '华威大学',
       englishName: 'University of Warwick',
-      logoSrc: 'public/warwick_logo.svg',
+      logoSrc: 'warwick_logo.svg',
       degree: '计算机科学学士',
       duration: '2023 - 2027',
       years: ['Year 1', 'Year 2', 'Year 4'],
@@ -104,7 +104,7 @@ export class EducationPage {
     new EducationCard('hkust-education', {
       school: '香港科技大学',
       englishName: 'HKUST',
-      logoSrc: 'public/hkust_logo.svg',
+      logoSrc: 'hkust_logo.svg',
       degree: '计算机工程交换生',
       duration: '2024 - 2025',
       years: ['Year 3 (Exchange)'],
