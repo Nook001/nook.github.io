@@ -188,12 +188,12 @@
             <!-- 简介 -->
             <div class="space-y-6">
               <h1 class="text-5xl font-light text-gray-900 leading-tight">
-                你好，我是 <span class="highlight-name">刘远志 Nook</span><span class="cursor"></span>
+                你好，我是 <span class="font-normal">刘远志 Nook</span><span class="cursor"></span>
               </h1>
               <p class="text-xl text-gray-600 leading-relaxed">
-                <span class="inline-block">就读于<span class="highlight-school">华威大学</span>计算机专业。</span><br>
-                <span class="inline-block ml-8"><span class="highlight-school-secondary">香港科技大学</span>计算机工程交换生，</span><br>
-                <span class="inline-block ml-16">专注于<span class="font-semibold text-gray-800">后端开发</span>并有<span class="font-semibold text-gray-800">全栈/游戏开发</span>经验。</span>
+                <span class="inline-block">就读于华威大学计算机专业。</span><br>
+                <span class="inline-block ml-8">香港科技大学计算机工程交换生，</span><br>
+                <span class="inline-block ml-16">专注于后端开发并有全栈/游戏开发经验。</span>
               </p>
             </div>
 
@@ -209,7 +209,7 @@
           </div>
         </div>
       </div>
-    `,this.initComponents()}initComponents(){new t(`phone-button`,{icon:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,tooltip:`复制电话`,onClick:()=>this.copyToClipboard(`+86 18807472405`,`电话号码已复制！`),theme:`slate`}),new t(`email-button`,{icon:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,tooltip:`复制邮箱`,onClick:()=>this.copyToClipboard(`nook_lyz@outlook.com`,`邮箱地址已复制！`),theme:`slate`}),new n(`warwick-capsule`,{logoSrc:`/warwick_logo.svg`,text:`Warwick`,alt:`University of Warwick`,customTextColor:`#8a7fe3`,customLogoFilter:`brightness(0) saturate(100%) invert(65%) sepia(36%) saturate(1087%) hue-rotate(204deg) brightness(95%) contrast(89%)`}),new n(`hkust-capsule`,{logoSrc:`/hkust_logo.svg`,text:`HKUST`,alt:`Hong Kong University of Science and Technology`,customTextColor:`#003974`})}async copyToClipboard(e,t){try{await navigator.clipboard.writeText(e),this.showToast(t)}catch(e){console.error(`复制失败:`,e),this.showToast(`复制失败，请重试`,`error`)}}showToast(e,t=`success`){let n=document.createElement(`div`);n.className=`fixed bottom-8 right-8 px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform translate-y-0 opacity-100 z-50 ${t===`success`?`bg-gray-900 text-white`:`bg-red-500 text-white`}`,n.textContent=e,document.body.appendChild(n),setTimeout(()=>{n.classList.add(`opacity-0`,`translate-y-2`),setTimeout(()=>n.remove(),300)},2e3)}},i=class{container;options;constructor(e,t){let n=document.getElementById(e);if(!n)throw Error(`Element with id ${e} not found`);this.container=n,this.options=t,this.render()}render(){let{school:e,englishName:t,logoSrc:n,degree:r,duration:i,years:a,gpa:o,courses:s,achievements:c,primaryColor:l,isPrimary:u,logoFilter:d}=this.options,f=d?`style="filter: ${d};"`:``;this.container.innerHTML=`
+    `,this.initComponents()}initComponents(){new t(`phone-button`,{icon:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,tooltip:`复制电话`,onClick:()=>this.copyToClipboard(`+86 18807472405`,`电话号码已复制！`),theme:`slate`}),new t(`email-button`,{icon:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,tooltip:`复制邮箱`,onClick:()=>this.copyToClipboard(`nook_lyz@outlook.com`,`邮箱地址已复制！`),theme:`slate`}),new n(`warwick-capsule`,{logoSrc:`public/warwick_logo.svg`,text:`Warwick`,alt:`University of Warwick`,customTextColor:`#8a7fe3`,customLogoFilter:`brightness(0) saturate(100%) invert(65%) sepia(36%) saturate(1087%) hue-rotate(204deg) brightness(95%) contrast(89%)`}),new n(`hkust-capsule`,{logoSrc:`public/hkust_logo.svg`,text:`HKUST`,alt:`Hong Kong University of Science and Technology`,customTextColor:`#003974`})}async copyToClipboard(e,t){try{await navigator.clipboard.writeText(e),this.showToast(t)}catch(e){console.error(`复制失败:`,e),this.showToast(`复制失败，请重试`,`error`)}}showToast(e,t=`success`){let n=document.createElement(`div`);n.className=`fixed bottom-8 right-8 px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform translate-y-0 opacity-100 z-50 ${t===`success`?`bg-gray-900 text-white`:`bg-red-500 text-white`}`,n.textContent=e,document.body.appendChild(n),setTimeout(()=>{n.classList.add(`opacity-0`,`translate-y-2`),setTimeout(()=>n.remove(),300)},2e3)}},i=class{container;options;constructor(e,t){let n=document.getElementById(e);if(!n)throw Error(`Element with id ${e} not found`);this.container=n,this.options=t,this.render()}render(){let{school:e,englishName:t,logoSrc:n,degree:r,duration:i,years:a,gpa:o,courses:s,achievements:c,primaryColor:l,isPrimary:u,logoFilter:d}=this.options,f=d?`style="filter: ${d};"`:``;this.container.innerHTML=`
       <div class="group relative">
         <!-- 主卡片 -->
         <div class="relative bg-white/80 backdrop-filter backdrop-blur-lg rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/50"
@@ -374,7 +374,7 @@
           </div>
         </div>
       </div>
-    `,this.initComponents()}initComponents(){new i(`warwick-education`,{school:`华威大学`,englishName:`University of Warwick`,logoSrc:`/warwick_logo.svg`,degree:`计算机科学学士`,duration:`2023 - 2027`,years:[`Year 1`,`Year 2`,`Year 4`],gpa:`一等荣誉 (预期)`,courses:[`数据结构与算法`,`操作系统`,`线性规划`,`软件工程`,`函数式编程`,`人工智能`],achievements:[`院长名单 (Dean's List)`,`优秀学生奖学金`,`参与多个研究项目`],primaryColor:`#8a7fe3`,isPrimary:!0,logoFilter:`brightness(0) saturate(100%) invert(65%) sepia(36%) saturate(1087%) hue-rotate(204deg) brightness(95%) contrast(89%)`}),new i(`hkust-education`,{school:`香港科技大学`,englishName:`HKUST`,logoSrc:`/hkust_logo.svg`,degree:`计算机工程交换生`,duration:`2024 - 2025`,years:[`Year 3 (Exchange)`],gpa:`4.0/4.0`,courses:[`分布式系统`,`机器学习`,`计算机图形学`,`高级算法`,`云计算`,`移动应用开发`],achievements:[`交换生优秀表现奖`,`参与实验室研究`,`国际学术交流`],primaryColor:`#003974`,isPrimary:!1})}},o=class{container;project;onClick;constructor(e,t,n){let r=document.getElementById(e);if(!r)throw Error(`Element with id ${e} not found`);this.container=r,this.project=t,this.onClick=n,this.render()}render(){let{title:e,subtitle:t,description:n,techStack:r,primaryColor:i,category:a}=this.project,o={frontend:`🎨`,backend:`⚙️`,fullstack:`💻`,game:`🎮`};this.container.innerHTML=`
+    `,this.initComponents()}initComponents(){new i(`warwick-education`,{school:`华威大学`,englishName:`University of Warwick`,logoSrc:`public/warwick_logo.svg`,degree:`计算机科学学士`,duration:`2023 - 2027`,years:[`Year 1`,`Year 2`,`Year 4`],gpa:`一等荣誉 (预期)`,courses:[`数据结构与算法`,`操作系统`,`线性规划`,`软件工程`,`函数式编程`,`人工智能`],achievements:[],primaryColor:`#8a7fe3`,isPrimary:!0,logoFilter:`brightness(0) saturate(100%) invert(65%) sepia(36%) saturate(1087%) hue-rotate(204deg) brightness(95%) contrast(89%)`}),new i(`hkust-education`,{school:`香港科技大学`,englishName:`HKUST`,logoSrc:`public/hkust_logo.svg`,degree:`计算机工程交换生`,duration:`2024 - 2025`,years:[`Year 3 (Exchange)`],gpa:`4.0/4.0`,courses:[`分布式系统`,`机器学习`,`计算机图形学`,`高级算法`,`云计算`,`移动应用开发`],achievements:[],primaryColor:`#003974`,isPrimary:!1})}},o=class{container;project;onClick;constructor(e,t,n){let r=document.getElementById(e);if(!r)throw Error(`Element with id ${e} not found`);this.container=r,this.project=t,this.onClick=n,this.render()}render(){let{title:e,subtitle:t,description:n,techStack:r,primaryColor:i,category:a}=this.project,o={frontend:`🎨`,backend:`⚙️`,fullstack:`💻`,game:`🎮`};this.container.innerHTML=`
       <div class="project-card group relative cursor-pointer">
         <div class="relative bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/50 h-full flex flex-col"
              style="box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
@@ -767,7 +767,305 @@
       
       <!-- 模态框容器 -->
       <div id="project-modal"></div>
-    `,this.renderProjects(),this.attachFilterListeners()}renderProjects(){let e=document.getElementById(`projects-grid`);e&&(e.innerHTML=``,(this.currentFilter===`all`?this.projects:this.projects.filter(e=>e.category===this.currentFilter)).forEach(t=>{let n=document.createElement(`div`);n.id=`project-card-${t.id}`,e.appendChild(n),new o(n.id,t,e=>{this.openModal(e)})}))}attachFilterListeners(){let e=document.querySelectorAll(`.filter-btn`);e.forEach(t=>{t.addEventListener(`click`,t=>{let n=t.currentTarget,r=n.dataset.filter||`all`;e.forEach(e=>e.classList.remove(`active`,`border-purple-400`)),n.classList.add(`active`,`border-purple-400`),this.currentFilter=r,this.renderProjects()})})}initModal(){document.getElementById(`project-modal`)&&(this.modal=new s(`project-modal`))}openModal(e){this.modal&&this.modal.open(e)}},l=document.getElementById(`app`);l.innerHTML=`
+    `,this.renderProjects(),this.attachFilterListeners()}renderProjects(){let e=document.getElementById(`projects-grid`);e&&(e.innerHTML=``,(this.currentFilter===`all`?this.projects:this.projects.filter(e=>e.category===this.currentFilter)).forEach(t=>{let n=document.createElement(`div`);n.id=`project-card-${t.id}`,e.appendChild(n),new o(n.id,t,e=>{this.openModal(e)})}))}attachFilterListeners(){let e=document.querySelectorAll(`.filter-btn`);e.forEach(t=>{t.addEventListener(`click`,t=>{let n=t.currentTarget,r=n.dataset.filter||`all`;e.forEach(e=>e.classList.remove(`active`,`border-purple-400`)),n.classList.add(`active`,`border-purple-400`),this.currentFilter=r,this.renderProjects()})})}initModal(){document.getElementById(`project-modal`)&&(this.modal=new s(`project-modal`))}openModal(e){this.modal&&this.modal.open(e)}},l=class{container;config;constructor(e,t){let n=document.getElementById(e);if(!n)throw Error(`Element with id ${e} not found`);this.container=n,this.config=t,this.render()}render(){let{company:e,englishName:t,logoSrc:n,position:r,duration:i,location:a,themeColor:o,side:s,responsibilities:c,achievements:l,tags:u}=this.config,d=s===`left`,f=d?`pr-8 md:pr-16 text-right`:`pl-8 md:pl-16 text-left`,p=d?`items-end`:`items-start`,m=d?`flex-row-reverse`:`flex-row`;this.container.innerHTML=`
+      <style>
+        /* 卡片进入动画 */
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .card-left {
+          animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .card-right {
+          animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* 渐变边框效果 */
+        .gradient-border {
+          position: relative;
+          background: white;
+          border-radius: 24px;
+          padding: 2px;
+          background: linear-gradient(135deg, ${o}40, ${o}80, ${o}40);
+        }
+
+        .gradient-border::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 24px;
+          padding: 2px;
+          background: linear-gradient(135deg, ${o}, ${o}80, ${o});
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        .gradient-border:hover::before {
+          opacity: 1;
+        }
+
+        /* 工作内容列表样式 */
+        .responsibility-item {
+          transition: all 0.3s ease;
+        }
+
+        .responsibility-item:hover {
+          transform: translateX(${d?`-5px`:`5px`});
+          color: ${o};
+        }
+
+        /* 标签悬停效果 */
+        .tag-item {
+          transition: all 0.3s ease;
+        }
+
+        .tag-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 16px ${o}40;
+        }
+      </style>
+
+      <div class="relative flex ${m} items-center gap-0">
+        <!-- 时间轴节点 -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+          <div class="relative">
+            <!-- 外圈光晕 -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-white to-transparent blur-md opacity-60" style="width: 24px; height: 24px; margin: -4px;"></div>
+            <!-- 主圆点 -->
+            <div class="w-4 h-4 rounded-full border-4 border-white shadow-lg timeline-dot" style="background: linear-gradient(135deg, ${o}, ${o}cc);"></div>
+          </div>
+        </div>
+
+        <!-- 卡片内容 -->
+        <div class="w-full md:w-1/2 ${f} card-${s}">
+          <div class="gradient-border">
+            <div class="bg-white/90 backdrop-blur-sm rounded-[22px] p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <!-- 公司头部 -->
+              <div class="flex ${m} items-center gap-4 mb-6 pb-6 border-b-2" style="border-color: ${o}20;">
+                <div class="w-16 h-16 flex-shrink-0 bg-white rounded-2xl shadow-md p-3 hover:scale-110 transition-transform duration-300">
+                  <img src="${n}" alt="${e}" class="w-full h-full object-contain">
+                </div>
+                <div class="flex-1 ${d?`text-right`:`text-left`}">
+                  <h3 class="text-2xl md:text-3xl font-bold mb-1" style="color: ${o};">${e}</h3>
+                  <p class="text-sm text-gray-500 font-medium">${t}</p>
+                </div>
+              </div>
+
+              <!-- 职位信息 -->
+              <div class="mb-6 flex ${m} ${d?`justify-end`:`justify-start`} gap-2 flex-wrap">
+                <div class="px-4 py-2 rounded-full text-sm font-semibold shadow-md" style="background: linear-gradient(135deg, ${o}15, ${o}25); color: ${o};">
+                  ${r}
+                </div>
+              </div>
+
+              <!-- 时间和地点 -->
+              <div class="mb-6 flex ${m} ${d?`justify-end`:`justify-start`} gap-4 text-sm text-gray-600">
+                <div class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${o}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  <span class="font-medium">${i}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${o}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span class="font-medium">${a}</span>
+                </div>
+              </div>
+
+              <!-- 工作内容 -->
+              <div class="mb-6 flex flex-col ${p}">
+                <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2 ${m}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${o}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>工作内容</span>
+                </h4>
+                <div class="space-y-2 ${d?`text-right`:`text-left`}">
+                  ${c.map(e=>`
+                    <div class="responsibility-item flex items-start gap-2 text-sm text-gray-700 ${m}">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${o}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span>${e}</span>
+                    </div>
+                  `).join(``)}
+                </div>
+              </div>
+
+              <!-- 成就 -->
+              <div class="mb-6 flex flex-col ${p}">
+                <h4 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2 ${m}">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${o}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                  </svg>
+                  <span>主要成就</span>
+                </h4>
+                <div class="space-y-2 ${d?`text-right`:`text-left`}">
+                  ${l.map(e=>`
+                    <div class="flex items-start gap-2 text-sm font-medium ${m}" style="color: ${o};">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <span>${e}</span>
+                    </div>
+                  `).join(``)}
+                </div>
+              </div>
+
+              <!-- 技术标签 -->
+              <div class="flex ${m} ${d?`justify-end`:`justify-start`} flex-wrap gap-2">
+                ${u.map(e=>`
+                  <span class="tag-item px-3 py-1.5 text-xs font-semibold rounded-lg shadow-sm" style="background: linear-gradient(135deg, ${o}10, ${o}20); color: ${o}; border: 1px solid ${o}30;">
+                    ${e}
+                  </span>
+                `).join(``)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `}},u=class{container;constructor(e){let t=document.getElementById(e);if(!t)throw Error(`Element with id ${e} not found`);this.container=t,this.render()}render(){this.container.innerHTML=`
+      <style>
+        /* 标题渐变动画 */
+        @keyframes shimmer {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+        
+        .title-shimmer {
+          background: linear-gradient(
+            90deg,
+            #06b6d4 0%,
+            #3b82f6 25%,
+            #8b5cf6 50%,
+            #3b82f6 75%,
+            #06b6d4 100%
+          );
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: shimmer 3s linear infinite;
+        }
+
+        /* 时间轴动画 */
+        @keyframes drawLine {
+          from { height: 0; }
+          to { height: 100%; }
+        }
+
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .timeline-line {
+          animation: drawLine 1.5s ease-out forwards;
+        }
+
+        .timeline-dot {
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* 背景装饰 */
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .float-slow {
+          animation: float 8s ease-in-out infinite;
+        }
+
+        .float-medium {
+          animation: float 6s ease-in-out infinite 1s;
+        }
+      </style>
+      
+      <div class="relative min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 py-20">
+        <!-- 装饰背景 -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div class="absolute top-10 left-10 w-72 h-72 bg-cyan-300 rounded-full filter blur-3xl float-slow"></div>
+          <div class="absolute top-40 right-20 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl float-medium"></div>
+          <div class="absolute bottom-20 left-1/3 w-80 h-80 bg-purple-300 rounded-full filter blur-3xl float-slow"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+          <!-- 标题 -->
+          <div class="text-center mb-20">
+            <h2 class="text-6xl font-bold title-shimmer mb-4">实习经历</h2>
+            <p class="text-xl text-gray-600">Professional Experience</p>
+            <div class="mt-6 flex items-center justify-center gap-2 text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span class="text-sm">时间轴展示</span>
+            </div>
+          </div>
+
+          <!-- 时间轴容器 -->
+          <div class="relative">
+            <!-- 中央时间线 -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 via-blue-400 to-purple-400 transform -translate-x-1/2 timeline-line"></div>
+
+            <!-- 经历卡片 -->
+            <div class="space-y-16">
+              <div id="experience-1" class="timeline-item"></div>
+              <div id="experience-2" class="timeline-item"></div>
+              <div id="experience-3" class="timeline-item"></div>
+            </div>
+          </div>
+
+          <!-- 底部装饰 -->
+          <div class="mt-20 text-center">
+            <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-full border border-gray-200 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span class="text-gray-700 font-medium">持续成长中...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,this.initComponents()}initComponents(){new l(`experience-1`,{company:`字节跳动`,englishName:`ByteDance`,logoSrc:`/bytedance_logo.svg`,position:`前端开发实习生`,duration:`2024.06 - 2024.09`,location:`北京`,themeColor:`#00d4aa`,side:`left`,responsibilities:[`参与抖音电商后台管理系统的开发，使用 React + TypeScript 构建复杂交互界面`,`优化前端性能，通过代码分割和懒加载将首屏加载时间减少 40%`,`开发可复用的组件库，提升团队开发效率 30%`,`参与需求评审和技术方案设计，与后端团队紧密协作`],achievements:[`独立完成 3 个核心功能模块的开发`,`修复 20+ 线上 bug，提升系统稳定性`,`获得团队"最佳实习生"称号`],tags:[`React`,`TypeScript`,`Webpack`,`Git`]}),new l(`experience-2`,{company:`腾讯`,englishName:`Tencent`,logoSrc:`/tencent_logo.svg`,position:`后端开发实习生`,duration:`2023.12 - 2024.03`,location:`深圳`,themeColor:`#0066cc`,side:`right`,responsibilities:[`参与微信支付后台服务的开发和维护，使用 Go 语言编写高并发服务`,`设计和实现 RESTful API，日均处理请求量 500万+`,`优化数据库查询性能，将关键接口响应时间从 200ms 降至 50ms`,`编写单元测试和集成测试，代码覆盖率达到 85%`],achievements:[`成功上线 2 个新功能，服务千万级用户`,`发现并修复潜在安全漏洞 3 个`,`获得部门"优秀实习生"奖`],tags:[`Go`,`MySQL`,`Redis`,`Docker`]}),new l(`experience-3`,{company:`阿里巴巴`,englishName:`Alibaba`,logoSrc:`/alibaba_logo.svg`,position:`算法实习生`,duration:`2023.06 - 2023.09`,location:`杭州`,themeColor:`#ff6a00`,side:`left`,responsibilities:[`参与淘宝推荐系统的算法优化，使用深度学习提升点击率`,`实现多种推荐算法（协同过滤、深度 CTR 模型等）并进行 A/B 测试`,`处理和分析海量用户行为数据，构建用户画像`,`优化模型训练流程，将训练时间缩短 60%`],achievements:[`CTR 提升 12%，GMV 增长 8%`,`发表内部技术分享 2 次`,`获得导师"五星好评"`],tags:[`Python`,`TensorFlow`,`Spark`,`SQL`]})}},d=document.getElementById(`app`);d.innerHTML=`
   <style>
     /* 页面容器布局 */
     html, body {
@@ -817,4 +1115,5 @@
   <div id="home-page" class="page-container page-visible"></div>
   <div id="education-page" class="page-container page-hidden"></div>
   <div id="projects-page" class="page-container page-hidden"></div>
-`,new r(`home-page`),new a(`education-page`),new c(`projects-page`);var u=0,d=!1,f=!1,p=0;window.addEventListener(`wheel`,e=>{if(d||f){e.preventDefault();return}let t=Date.now(),n=document.getElementById(`home-page`),r=document.getElementById(`education-page`),i=document.getElementById(`projects-page`),a;a=u===0?n:u===1?r:i;let o=a.scrollTop,s=a.scrollHeight,c=a.clientHeight,l=o===0,m=Math.abs(s-c-o)<5;if(t-p<800)return;e.deltaY>0&&u===0&&m?(e.preventDefault(),h(0,1,n,r)):e.deltaY>0&&u===1&&m?(e.preventDefault(),h(1,2,r,i)):e.deltaY<0&&u===1&&l?(e.preventDefault(),h(1,0,r,n)):e.deltaY<0&&u===2&&l&&(e.preventDefault(),h(2,1,i,r));function h(e,n,r,i){d=!0,u=n,p=t,i.scrollTop=0,r.classList.remove(`page-visible`),r.classList.add(n>e?`page-exit`:`page-hidden`),i.classList.remove(n>e?`page-hidden`:`page-exit`),i.classList.add(`page-visible`),f=!0,setTimeout(()=>{d=!1,setTimeout(()=>{f=!1},500)},800)}},{passive:!1});
+  <div id="experience-page" class="page-container page-hidden"></div>
+`,new r(`home-page`),new a(`education-page`),new c(`projects-page`),new u(`experience-page`);var f=0,p=!1,m=!1,h=0;window.addEventListener(`wheel`,e=>{if(p||m){e.preventDefault();return}let t=Date.now(),n=document.getElementById(`home-page`),r=document.getElementById(`education-page`),i=document.getElementById(`projects-page`),a=document.getElementById(`experience-page`),o;o=f===0?n:f===1?r:f===2?i:a;let s=o.scrollTop,c=o.scrollHeight,l=o.clientHeight,u=s===0,d=Math.abs(c-l-s)<5;if(t-h<800)return;e.deltaY>0&&f===0&&d?(e.preventDefault(),g(0,1,n,r)):e.deltaY>0&&f===1&&d?(e.preventDefault(),g(1,2,r,i)):e.deltaY>0&&f===2&&d?(e.preventDefault(),g(2,3,i,a)):e.deltaY<0&&f===1&&u?(e.preventDefault(),g(1,0,r,n)):e.deltaY<0&&f===2&&u?(e.preventDefault(),g(2,1,i,r)):e.deltaY<0&&f===3&&u&&(e.preventDefault(),g(3,2,a,i));function g(e,n,r,i){p=!0,f=n,h=t,i.scrollTop=0,r.classList.remove(`page-visible`),r.classList.add(n>e?`page-exit`:`page-hidden`),i.classList.remove(n>e?`page-hidden`:`page-exit`),i.classList.add(`page-visible`),m=!0,setTimeout(()=>{p=!1,setTimeout(()=>{m=!1},500)},800)}},{passive:!1});
