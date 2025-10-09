@@ -2,6 +2,7 @@ import './style.css'
 import { HomePage } from './home/HomePage'
 import { EducationPage } from './education/EducationPage'
 import { ProjectsPage } from './projects/ProjectsPage'
+import { ExperiencePage } from './experience/ExperiencePage'
 
 // 页面管理
 const app = document.getElementById('app')!;
@@ -57,15 +58,17 @@ app.innerHTML = `
   <div id="home-page" class="page-container page-visible"></div>
   <div id="education-page" class="page-container page-hidden"></div>
   <div id="projects-page" class="page-container page-hidden"></div>
+  <div id="experience-page" class="page-container page-hidden"></div>
 `;
 
 // 初始化页面
 new HomePage('home-page');
 new EducationPage('education-page');
 new ProjectsPage('projects-page');
+new ExperiencePage('experience-page');
 
 // 监听滚动事件实现页面切换
-let currentPage = 0; // 0: home, 1: education, 2: projects
+let currentPage = 0; // 0: home, 1: education, 2: projects, 3: experience
 let isTransitioning = false; // 页面切换中
 let isScrollLocked = false; // 滚动锁定
 let lastScrollTime = 0;
@@ -81,12 +84,14 @@ window.addEventListener('wheel', (e) => {
   const homePage = document.getElementById('home-page')!;
   const educationPage = document.getElementById('education-page')!;
   const projectsPage = document.getElementById('projects-page')!;
+  const experiencePage = document.getElementById('experience-page')!;
   
   // 获取当前可见页面
   let visiblePage: HTMLElement;
   if (currentPage === 0) visiblePage = homePage;
   else if (currentPage === 1) visiblePage = educationPage;
-  else visiblePage = projectsPage;
+  else if (currentPage === 2) visiblePage = projectsPage;
+  else visiblePage = experiencePage;
   
   const scrollTop = visiblePage.scrollTop;
   const scrollHeight = visiblePage.scrollHeight;
@@ -107,6 +112,10 @@ window.addEventListener('wheel', (e) => {
     // 教育页面 -> 项目页面
     e.preventDefault();
     switchPage(1, 2, educationPage, projectsPage);
+  } else if (e.deltaY > 0 && currentPage === 2 && isAtBottom) {
+    // 项目页面 -> 实习经历页面
+    e.preventDefault();
+    switchPage(2, 3, projectsPage, experiencePage);
   } else if (e.deltaY < 0 && currentPage === 1 && isAtTop) {
     // 教育页面 -> 首页
     e.preventDefault();
@@ -115,6 +124,10 @@ window.addEventListener('wheel', (e) => {
     // 项目页面 -> 教育页面
     e.preventDefault();
     switchPage(2, 1, projectsPage, educationPage);
+  } else if (e.deltaY < 0 && currentPage === 3 && isAtTop) {
+    // 实习经历页面 -> 项目页面
+    e.preventDefault();
+    switchPage(3, 2, experiencePage, projectsPage);
   }
   
   function switchPage(from: number, to: number, fromPage: HTMLElement, toPage: HTMLElement) {

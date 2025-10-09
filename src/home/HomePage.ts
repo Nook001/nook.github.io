@@ -132,12 +132,12 @@ export class HomePage {
             <!-- 简介 -->
             <div class="space-y-6">
               <h1 class="text-5xl font-light text-gray-900 leading-tight">
-                你好，我是 <span class="highlight-name">刘远志 Nook</span><span class="cursor"></span>
+                你好，我是 <span class="font-normal">刘远志 Nook</span><span class="cursor"></span>
               </h1>
               <p class="text-xl text-gray-600 leading-relaxed">
-                <span class="inline-block">就读于<span class="highlight-school">华威大学</span>计算机专业。</span><br>
-                <span class="inline-block ml-8"><span class="highlight-school-secondary">香港科技大学</span>计算机工程交换生，</span><br>
-                <span class="inline-block ml-16">专注于<span class="font-semibold text-gray-800">后端开发</span>并有<span class="font-semibold text-gray-800">全栈/游戏开发</span>经验。</span>
+                <span class="inline-block">就读于华威大学计算机专业。</span><br>
+                <span class="inline-block ml-8">香港科技大学计算机工程交换生，</span><br>
+                <span class="inline-block ml-16">专注于后端开发并有全栈/游戏开发经验。</span>
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export class HomePage {
 
     // Warwick 胶囊 - 淡紫色文字和logo
     new Capsule('warwick-capsule', {
-      logoSrc: '/warwick_logo.svg',
+      logoSrc: 'public/warwick_logo.svg',
       text: 'Warwick',
       alt: 'University of Warwick',
       customTextColor: '#8a7fe3', // 淡紫色
@@ -187,7 +187,7 @@ export class HomePage {
 
     // HKUST 胶囊 - HKUST蓝色文字
     new Capsule('hkust-capsule', {
-      logoSrc: '/hkust_logo.svg',
+      logoSrc: 'public/hkust_logo.svg',
       text: 'HKUST',
       alt: 'Hong Kong University of Science and Technology',
       customTextColor: '#003974' // HKUST蓝色

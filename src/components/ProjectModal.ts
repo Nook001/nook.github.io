@@ -2,16 +2,14 @@ import type { Project } from '../projects/ProjectsPage';
 
 export class ProjectModal {
   private container: HTMLElement;
-  private projects: Project[];
   private currentProject: Project | null = null;
   private currentImageIndex: number = 0;
 
-  constructor(containerId: string, projects: Project[]) {
+  constructor(containerId: string) {
     const element = document.getElementById(containerId);
     if (!element) throw new Error(`Element with id ${containerId} not found`);
     
     this.container = element;
-    this.projects = projects;
   }
 
   public open(project: Project) {

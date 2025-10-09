@@ -293,7 +293,7 @@ export class ProjectsPage {
   private initModal() {
     const modalContainer = document.getElementById('project-modal');
     if (modalContainer) {
-      this.modal = new ProjectModal('project-modal', this.projects);
+      this.modal = new ProjectModal('project-modal');
     }
   }
 
